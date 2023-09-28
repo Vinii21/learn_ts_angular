@@ -1,0 +1,23 @@
+function classDecorate (
+    constructor: any
+) {
+   return class extends constructor {
+    newProperty = "New Property";
+    hello = "override"
+   } 
+}
+
+@classDecorate
+export class SuperClass {
+
+    public myProperty: string = "hjhv"
+
+    print() {
+        console.log("Hola mundo!")
+    }
+}
+
+console.log(SuperClass);
+
+const myClass = new SuperClass();
+console.log( myClass )
